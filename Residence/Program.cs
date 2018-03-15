@@ -15,10 +15,6 @@ namespace Residence
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-
             List<Resident> residents = new List<Resident>();
             Athletes athleteRes;
             Scholars scholarRes;
@@ -48,13 +44,17 @@ namespace Residence
                     scholarRes = new Scholars(values[0], values[1], values[2], values[3], values[4], values[5]);
                     residents.Add(scholarRes);
                 }
-
             }
             read.Close(); //close read stream
             file.Close(); //close file stream
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
+//Resident Parent class
 public abstract class Resident
 {
     public string ResidentType { get; set; }
@@ -64,18 +64,7 @@ public abstract class Resident
     public string RoomNum { get; set; }
     public string RoomFloor { get; set; }
     public double Rent;
-
     public Resident()
     {
-
-    }
-    public Resident(string ResidentType, string Fname, string Lname, string StudentID, string RoomNum, string RoomFloor)
-    {
-        this.ResidentType = ResidentType;
-        this.Fname = Fname;
-        this.Lname = Lname;
-        this.StudentID = StudentID;
-        this.RoomNum = RoomNum;
-        this.RoomFloor = RoomFloor;
     }
 }

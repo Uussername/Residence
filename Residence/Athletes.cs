@@ -8,13 +8,7 @@ namespace Residence
 {
     public class Athletes : Resident
     {
-        public string ResidentType { get; set; }
-        public string Fname { get; set; }
-        public string Lname { get; set; }
-        public string StudentID { get; set; }
-        public string RoomNum { get; set; }
-        public string RoomFloor { get; set; }
-        public double Rent = 1200;
+        double Rent = 1245.00;
 
         public Athletes(string ResidentType, string Fname, string Lname, string StudentID, string RoomNum, string RoomFloor)
         {
