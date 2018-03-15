@@ -172,6 +172,97 @@ namespace Residence
         {
             success.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tabs.SelectedIndex = 1;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Tabs.SelectedIndex = 2;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Tabs.SelectedIndex = 0;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Tabs.SelectedIndex = 0;
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            void Search(ref List<Resident> residentz, int x)
+            {
+                SFname.Text = residentz[x].Fname;
+                SLname.Text = residentz[x].Lname;
+                SResType.Text = residentz[x].ResidentType;
+                SStudID.Text = residentz[x].StudentID;
+                SFloor.Text = residentz[x].RoomFloor;
+                SRoom.Text = residentz[x].RoomNum;
+            }
+            void Reset()
+            {
+                label9.Hide();
+                SFname.Text = "";
+                SLname.Text = "";
+                SResType.Text = "";
+                SStudID.Text = "";
+                SFloor.Text = "";
+                SRoom.Text = "";
+            }
+            string input = textBox6.Text.ToString();
+            input = input.First().ToString().ToUpper() + input.Substring(1);
+            List<Resident> residents = new List<Resident>();
+            Files.READ(ref residents);
+            if (comboBox4.SelectedItem.ToString() is "First Name")
+            {
+                Reset();
+                for (var x = 0; x < residents.Count(); x++)
+                {
+                    if (residents[x].Fname == input)
+                    {
+                        Search(ref residents, x);
+                    }
+                }
+                if (SFname.Text == "")
+                {
+                    label9.Show();
+                }
+            }
+            if (comboBox4.SelectedItem.ToString() is "Last Name")
+            {
+                Reset();
+                for (var x = 0; x < residents.Count(); x++)
+                {
+                    if (residents[x].Lname == input)
+                    {
+                        Search(ref residents, x);
+                    }
+                }
+                if (SFname.Text == "")
+                {
+                    label9.Show();
+                }
+            }
+            if (comboBox4.SelectedItem.ToString() is "Student ID")
+            {
+                Reset();
+                for (var x = 0; x < residents.Count(); x++)
+                {
+                    if (residents[x].StudentID == textBox6.Text.ToString())
+                    {
+                        Search(ref residents, x);
+                    }
+                }
+                if (SFname.Text == "")
+                {
+                    label9.Show();
+                }
+            }
+        }
     }
     public class Files
     {
