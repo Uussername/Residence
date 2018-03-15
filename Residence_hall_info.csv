@@ -1,82 +1,85 @@
 Resident type,First Name,Last Name,Student ID,Room number,Floor
-Athlete,Alexander,Hixson, 1813,601,6
-Worker,Alita,Decarlo, 1862,301,3
-Scholarship,Angelica,Fouse, 1842,701,7
-Worker,Angelyn,Zona, 1861,206,2
-Scholarship,Annette,Stelling, 1872,705,7
-Worker,Antwan,Bento, 1843,205,2
-Scholarship,Arden,Mcneely, 1848,702,7
-Scholarship,Bonny,Landey, 1866,704,7
-Scholarship,Booker,Carillo, 1845,801,8
-Worker,Byron,Sharkey, 1877,202,2
-Worker,Carla,Markee, 1873,307,3
-Athlete,Dio,Brando, 1838,402,4
-Worker,Carolee,Kornreich, 1805,302,3
-Athlete,Chet,Haworth, 1803,403,4
-Athlete,Christeen,Burrier, 1830,405,4
-Scholarship,Claudie,Michelson, 1875,805,8
-Worker,Clora,Rew, 1859,201,2
-Athlete,Clyde,Reichard, 1801,401,4
-Athlete,Cornell,Fullenkamp, 1835,602,6
-Athlete,Dalton,Brymer, 1807,501,5
-Athlete,Dane,Bertin, 1853,603,6
-Worker,Delila,Monte, 1855,305,3
-Worker,Donald,Heide, 1814,303,3
-Worker,Ed,Hawke, 1834,204,2
-Scholarship,Emiko,Zollner, 1851,802,8
-Worker,Enedina,Vandam, 1871,301,3
-Worker,Erline,Clonts, 1880,302,3
-Athlete,Eryn,Korando, 1828,602,6
-Scholarship,Evangeline,Spink, 1878,706,7
-Athlete,Fawn,Hodgdon, 1810,601,6
-Worker,Flor,Grogg, 1804,202,2
-Worker,Geralyn,Wasilewski, 1817,203,2
-Worker,Hector,Sheehy, 1879,208,2
-Athlete,Ja,Fountaine, 1809,604,6
-Athlete,Jeremiah,Stover, 1821,404,4
-Scholarship,Joaquin,Bowler, 1881,806,8
-Athlete,Jonathan,Joestar, 1831,402,4
-Athlete,Kandy,Lakes, 1827,606,6
-Athlete,Kelsie,Asaro, 1815,504,5
-Athlete,Kermit,Iacovelli, 1812,404,4
-Worker,Kristel,Despres, 1829,104,1
-Worker,Krysten,Steiger, 1858,106,1
-Worker,Laverne,Heiman, 1816,103,1
-Scholarship,Lavette,Oneal, 1857,802,8
-Athlete,Letha,Tempel, 1850,503,5
-Worker,Malcolm,Heckard, 1840,105,1
-Worker,Marcell,Peppard, 1811,203,2
-Athlete,Marchelle,Lamar, 1806,503,5
-Worker,Mardell,Boose, 1820,104,1
-Athlete,Marie,Daniell, 1825,501,5
-Scholarship,Marquis,Hornback, 1869,804,8
-Worker,Martha,Schendel, 1870,207,2
-Worker,Maryetta,Sikora, 1837,304,3
-Worker,Mayme,Stern, 1874,102,1
-Worker,Mirian,Brunkhorst, 1864,306,3
-Worker,Missy,Mcphee, 1808,103,1
-Scholarship,Ngan,Figaro, 1854,702,7
-Scholarship,Nilda,Gauger, 1836,701,7
-Worker,Oretha,Atchinson, 1823,204,2
-Worker,Pandora,Darnall, 1856,101,1
-Worker,Pearline,Borgen, 1819,303,3
-Worker,Richard,Lookabaugh, 1849,105,1
-Athlete,Rogelio,Flom, 1818,605,6
-Scholarship,Roxy,Chairez, 1860,703,7
-Worker,Rudolph,Royston, 1826,304,3
-Athlete,Shauna,Imboden, 1841,502,5
-Athlete,Shawnna,Penland, 1832,502,5
-Athlete,Sherill,Franzen, 1844,603,6
-Scholarship,Shiloh,Devoe, 1863,803,8
-Athlete,Silva,Hoosier, 1824,504,5
-Worker,Stanley,Trawick, 1852,205,2
-Worker,Sylvie,Motsinger, 1865,101,1
-Worker,Terrence,Fonda, 1868,201,2
-Worker,Thaddeus,Salyer, 1802,102,1
-Athlete,Thalia,John, 1847,403,4
-Worker,Vashti,Belisle, 1846,305,3
-Athlete,Velia,Heater, 1822,401,4
-Athlete,Violet,Cundiff, 1833,505,5
-Worker,Walker,List, 1867,107,1
-Worker,Wenona,Wilham, 1876,108,1
-Scholarship,Zoraida,Arp, 1839,801,8
+Athlete,Alexander,Hixson,1813,601,6
+Worker,Alita,Decarlo,1862,301,3
+Scholarship,Angelica,Fouse,1842,701,7
+Worker,Angelyn,Zona,1861,206,2
+Scholarship,Annette,Stelling,1872,705,7
+Worker,Antwan,Bento,1843,205,2
+Scholarship,Arden,Mcneely,1848,702,7
+Scholarship,Bonny,Landey,1866,704,7
+Scholarship,Booker,Carillo,1845,801,8
+Worker,Byron,Sharkey,1877,202,2
+Worker,Carla,Markee,1873,307,3
+Athlete,Dio,Brando,1838,402,4
+Worker,Carolee,Kornreich,1805,302,3
+Athlete,Chet,Haworth,1803,403,4
+Athlete,Christeen,Burrier,1830,405,4
+Scholarship,Claudie,Michelson,1875,805,8
+Worker,Clora,Rew,1859,201,2
+Athlete,Clyde,Reichard,1801,401,4
+Athlete,Cornell,Fullenkamp,1835,602,6
+Athlete,Dalton,Brymer,1807,501,5
+Athlete,Dane,Bertin,1853,603,6
+Worker,Delila,Monte,1855,305,3
+Worker,Donald,Heide,1814,303,3
+Worker,Ed,Hawke,1834,204,2
+Scholarship,Emiko,Zollner,1851,802,8
+Worker,Enedina,Vandam,1871,301,3
+Worker,Erline,Clonts,1880,302,3
+Athlete,Eryn,Korando,1828,602,6
+Scholarship,Evangeline,Spink,1878,706,7
+Athlete,Fawn,Hodgdon,1810,601,6
+Worker,Flor,Grogg,1804,202,2
+Worker,Geralyn,Wasilewski,1817,203,2
+Worker,Hector,Sheehy,1879,208,2
+Athlete,Ja,Fountaine,1809,604,6
+Athlete,Jeremiah,Stover,1821,404,4
+Scholarship,Joaquin,Bowler,1881,806,8
+Athlete,Jonathan,Joestar,1831,402,4
+Athlete,Kandy,Lakes,1827,606,6
+Athlete,Kelsie,Asaro,1815,504,5
+Athlete,Kermit,Iacovelli,1812,404,4
+Worker,Kristel,Despres,1829,104,1
+Worker,Krysten,Steiger,1858,106,1
+Worker,Laverne,Heiman,1816,103,1
+Scholarship,Lavette,Oneal,1857,802,8
+Athlete,Letha,Tempel,1850,503,5
+Worker,Malcolm,Heckard,1840,105,1
+Worker,Marcell,Peppard,1811,203,2
+Athlete,Marchelle,Lamar,1806,503,5
+Worker,Mardell,Boose,1820,104,1
+Athlete,Marie,Daniell,1825,501,5
+Scholarship,Marquis,Hornback,1869,804,8
+Worker,Martha,Schendel,1870,207,2
+Worker,Maryetta,Sikora,1837,304,3
+Worker,Mayme,Stern,1874,102,1
+Worker,Mirian,Brunkhorst,1864,306,3
+Worker,Missy,Mcphee,1808,103,1
+Scholarship,Ngan,Figaro,1854,702,7
+Scholarship,Nilda,Gauger,1836,701,7
+Worker,Oretha,Atchinson,1823,204,2
+Worker,Pandora,Darnall,1856,101,1
+Worker,Pearline,Borgen,1819,303,3
+Worker,Richard,Lookabaugh,1849,105,1
+Athlete,Rogelio,Flom,1818,605,6
+Scholarship,Roxy,Chairez,1860,703,7
+Worker,Rudolph,Royston,1826,304,3
+Athlete,Shauna,Imboden,1841,502,5
+Athlete,Shawnna,Penland,1832,502,5
+Athlete,Sherill,Franzen,1844,603,6
+Scholarship,Shiloh,Devoe,1863,803,8
+Athlete,Silva,Hoosier,1824,504,5
+Worker,Stanley,Trawick,1852,205,2
+Worker,Sylvie,Motsinger,1865,101,1
+Worker,Terrence,Fonda,1868,201,2
+Worker,Thaddeus,Salyer,1802,102,1
+Athlete,Thalia,John,1847,403,4
+Worker,Vashti,Belisle,1846,305,3
+Athlete,Velia,Heater,1822,401,4
+Athlete,Violet,Cundiff,1833,505,5
+Worker,Walker,List,1867,107,1
+Worker,Wenona,Wilham,1876,108,1
+Scholarship,Zoraida,Arp,1839,801,8
+Scholarship,Jotaro,Kujo,1882,810,8
+Student Worker,Giorno,Giovana,1883,308,3
+Athlete,Lucky,Ted,1884,507,5

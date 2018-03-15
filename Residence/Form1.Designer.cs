@@ -41,6 +41,8 @@
             this.HomeTab = new System.Windows.Forms.TabPage();
             this.logout = new System.Windows.Forms.Button();
             this.NewTab = new System.Windows.Forms.TabPage();
+            this.success = new System.Windows.Forms.Label();
+            this.submit = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -55,6 +57,9 @@
             this.Fname = new System.Windows.Forms.Label();
             this.newTitle = new System.Windows.Forms.Label();
             this.SearchTab = new System.Windows.Forms.TabPage();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -194,6 +199,8 @@
             // 
             // NewTab
             // 
+            this.NewTab.Controls.Add(this.success);
+            this.NewTab.Controls.Add(this.submit);
             this.NewTab.Controls.Add(this.comboBox3);
             this.NewTab.Controls.Add(this.comboBox2);
             this.NewTab.Controls.Add(this.comboBox1);
@@ -215,6 +222,29 @@
             this.NewTab.Text = "New Resident";
             this.NewTab.UseVisualStyleBackColor = true;
             // 
+            // success
+            // 
+            this.success.AutoSize = true;
+            this.success.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.success.Location = new System.Drawing.Point(247, 455);
+            this.success.Name = "success";
+            this.success.Size = new System.Drawing.Size(212, 32);
+            this.success.TabIndex = 15;
+            this.success.Text = "Student Added!";
+            this.success.Visible = false;
+            this.success.MouseClick += new System.Windows.Forms.MouseEventHandler(this.success_MouseClick);
+            // 
+            // submit
+            // 
+            this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submit.Location = new System.Drawing.Point(62, 446);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(179, 48);
+            this.submit.TabIndex = 14;
+            this.submit.Text = "Submit";
+            this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
+            // 
             // comboBox3
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -231,13 +261,14 @@
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Athlete",
             "Student Worker",
+            "Athlete",
             "Scholarship"});
             this.comboBox2.Location = new System.Drawing.Point(169, 275);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 33);
+            this.comboBox2.Size = new System.Drawing.Size(208, 33);
             this.comboBox2.TabIndex = 12;
+            this.comboBox2.DropDownClosed += new System.EventHandler(this.comboBox2_DropDownClosed);
             // 
             // comboBox1
             // 
@@ -248,6 +279,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 33);
             this.comboBox1.TabIndex = 11;
+            this.comboBox1.DropDownClosed += new System.EventHandler(this.comboBox1_DropDownClosed);
             // 
             // textBox3
             // 
@@ -345,6 +377,9 @@
             // 
             // SearchTab
             // 
+            this.SearchTab.Controls.Add(this.textBox4);
+            this.SearchTab.Controls.Add(this.textBox5);
+            this.SearchTab.Controls.Add(this.textBox6);
             this.SearchTab.Controls.Add(this.label2);
             this.SearchTab.Controls.Add(this.label3);
             this.SearchTab.Controls.Add(this.label4);
@@ -357,14 +392,38 @@
             this.SearchTab.Padding = new System.Windows.Forms.Padding(3);
             this.SearchTab.Size = new System.Drawing.Size(778, 527);
             this.SearchTab.TabIndex = 2;
-            this.SearchTab.Text = "Floor";
+            this.SearchTab.Text = "Search Resident";
             this.SearchTab.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(136, 188);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(191, 30);
+            this.textBox4.TabIndex = 16;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(136, 136);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(191, 30);
+            this.textBox5.TabIndex = 15;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(136, 90);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(191, 30);
+            this.textBox6.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 365);
+            this.label2.Location = new System.Drawing.Point(10, 373);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 25);
             this.label2.TabIndex = 13;
@@ -374,7 +433,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 313);
+            this.label3.Location = new System.Drawing.Point(10, 321);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 25);
             this.label3.TabIndex = 12;
@@ -384,7 +443,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 267);
+            this.label4.Location = new System.Drawing.Point(9, 275);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 25);
             this.label4.TabIndex = 11;
@@ -394,7 +453,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 131);
+            this.label5.Location = new System.Drawing.Point(9, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 25);
             this.label5.TabIndex = 10;
@@ -404,7 +463,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 183);
+            this.label6.Location = new System.Drawing.Point(9, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 25);
             this.label6.TabIndex = 9;
@@ -414,7 +473,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 85);
+            this.label7.Location = new System.Drawing.Point(9, 93);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 25);
             this.label7.TabIndex = 8;
@@ -488,15 +547,20 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.BindingSource form1BindingSource;
         private System.Windows.Forms.BindingSource form1BindingSource1;
+        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label success;
     }
 }
 
