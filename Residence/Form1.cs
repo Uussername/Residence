@@ -13,6 +13,7 @@ namespace Residence
 {
     public partial class Form1 : Form
     {
+        //initial login screen, removes everything but login
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +21,8 @@ namespace Residence
             Tabs.TabPages.Remove(NewTab);
             Tabs.TabPages.Remove(SearchTab);
         }
+
+        //Login enter button, only adds tabs if user name is home and password is 1234
         private void loginEnter_Click(object sender, EventArgs e)
         {
             if (username.Text == "home" && password.Text == "1234")
@@ -37,6 +40,8 @@ namespace Residence
                 password.Clear();
             }
         }
+
+        //clicked logout button from home, readds login tab, removes all other tabs
         private void logout_Click(object sender, EventArgs e)
         {
             Tabs.TabPages.Add(LogIn);
@@ -44,6 +49,8 @@ namespace Residence
             Tabs.TabPages.Remove(NewTab);
             Tabs.TabPages.Remove(SearchTab);
         }
+
+        //resident type box closed, changes floor combobox (comboBox1) to available floors
         private void comboBox2_DropDownClosed(object sender, EventArgs e)
         {
             try
@@ -76,7 +83,7 @@ namespace Residence
             }
         }
 
-
+        //floor box closed, changes room number box (comboBox3) to available rooms on that floor
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
             try
@@ -135,6 +142,8 @@ namespace Residence
 
             }
         }
+
+        //submit button on new resident creates a new resident if the student id doesn't match any other and all fields are filled
         private void submit_Click(object sender, EventArgs e)
         {
             if (comboBox2.SelectedItem == null || textBox1.Text == null || textBox2.Text== null ||
@@ -168,32 +177,40 @@ namespace Residence
             success.Show();
         }
 
+        //re hides success message after clicking again, after submiting a new resident
         private void success_MouseClick(object sender, MouseEventArgs e)
         {
             success.Hide();
         }
 
+        //opens New Resident tab
         private void button1_Click(object sender, EventArgs e)
         {
             Tabs.SelectedIndex = 1;
         }
 
+        //opens Seatch Resident tab
         private void button2_Click(object sender, EventArgs e)
         {
             Tabs.SelectedIndex = 2;
         }
 
+        //home button on new resident, brings to home tab
         private void button4_Click(object sender, EventArgs e)
         {
             Tabs.SelectedIndex = 0;
         }
 
+        //home button on search resident, brings to home tab
         private void button3_Click(object sender, EventArgs e)
         {
             Tabs.SelectedIndex = 0;
         }
+
+        //when search clicked, reads file and looks for specific data in specified field
         private void button5_Click(object sender, EventArgs e)
         {
+            //retrives and displays data
             void Search(ref List<Resident> residentz, int x)
             {
                 SFname.Text = residentz[x].Fname;
@@ -203,6 +220,7 @@ namespace Residence
                 SFloor.Text = residentz[x].RoomFloor;
                 SRoom.Text = residentz[x].RoomNum;
             }
+            //resets all the text labels, clears search box
             void Reset()
             {
                 label9.Hide();
@@ -212,11 +230,14 @@ namespace Residence
                 SStudID.Text = "";
                 SFloor.Text = "";
                 SRoom.Text = "";
+                textBox6.Clear();
+                comboBox4.Items.Clear();
             }
-            string input = textBox6.Text.ToString();
+            string input = textBox6.Text.ToString().ToLower();
             input = input.First().ToString().ToUpper() + input.Substring(1);
             List<Resident> residents = new List<Resident>();
             Files.READ(ref residents);
+
             if (comboBox4.SelectedItem.ToString() is "First Name")
             {
                 Reset();
@@ -232,6 +253,7 @@ namespace Residence
                     label9.Show();
                 }
             }
+
             if (comboBox4.SelectedItem.ToString() is "Last Name")
             {
                 Reset();
@@ -247,6 +269,7 @@ namespace Residence
                     label9.Show();
                 }
             }
+
             if (comboBox4.SelectedItem.ToString() is "Student ID")
             {
                 Reset();
@@ -263,7 +286,22 @@ namespace Residence
                 }
             }
         }
+
+        //when search by comboBox(4) closed clears the search field (textBox6) 
+        private void comboBox4_DropDownClosed(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox6.Clear();
+            }
+            catch (NullReferenceException)
+            {
+
+            }
+        }
     }
+
+    //class for file operation methods
     public class Files
     {
         const string PATH = @"C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Residence\Residence_hall_info.csv";

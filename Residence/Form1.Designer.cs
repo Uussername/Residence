@@ -60,6 +60,7 @@
             this.Fname = new System.Windows.Forms.Label();
             this.newTitle = new System.Windows.Forms.Label();
             this.SearchTab = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.SRoom = new System.Windows.Forms.Label();
             this.SFloor = new System.Windows.Forms.Label();
             this.SResType = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.form1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label9 = new System.Windows.Forms.Label();
             this.Tabs.SuspendLayout();
             this.LogIn.SuspendLayout();
             this.HomeTab.SuspendLayout();
@@ -449,6 +449,17 @@
             this.SearchTab.Text = "Search Resident";
             this.SearchTab.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(107, 139);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(179, 25);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "No Resident Found";
+            this.label9.Visible = false;
+            // 
             // SRoom
             // 
             this.SRoom.AutoSize = true;
@@ -526,6 +537,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(148, 33);
             this.comboBox4.TabIndex = 19;
+            this.comboBox4.DropDownClosed += new System.EventHandler(this.comboBox4_DropDownClosed);
             // 
             // label8
             // 
@@ -632,17 +644,6 @@
             // form1BindingSource1
             // 
             this.form1BindingSource1.DataSource = typeof(Residence.Form1);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(107, 139);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(179, 25);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "No Resident Found";
-            this.label9.Visible = false;
             // 
             // Form1
             // 
