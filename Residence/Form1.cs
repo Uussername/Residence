@@ -142,12 +142,24 @@ namespace Residence
 
             }
         }
+        //user must check box in order to submit data
+        private void Verify_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Verify.Checked == true)
+            {
+                submit.Show();
+            }
+            if (Verify.Checked == false)
+            {
+                submit.Hide();
+            }
+        }
 
         //submit button on new resident creates a new resident if the student id doesn't match any other and all fields are filled
         private void submit_Click(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedItem == null || textBox1.Text == null || textBox2.Text== null ||
-                textBox3.Text == null || comboBox3.SelectedItem == null || comboBox1.SelectedItem == null)
+            if (comboBox2.SelectedItem == null || textBox1.Text == "" || textBox2.Text== "" ||
+                textBox3.Text == "" || comboBox3.SelectedItem == null || comboBox1.SelectedItem == null)
             {
                 MessageBox.Show("One or more fields are empty", "Information error",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -210,6 +222,12 @@ namespace Residence
         //when search clicked, reads file and looks for specific data in specified field
         private void button5_Click(object sender, EventArgs e)
         {
+            if (comboBox4.SelectedItem == null || textBox6.Text == "")
+            {
+                MessageBox.Show("One or more required fields are empty", "Information error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             //retrives and displays data
             void Search(ref List<Resident> residentz, int x)
             {
@@ -229,15 +247,14 @@ namespace Residence
                 SResType.Text = "";
                 SStudID.Text = "";
                 SFloor.Text = "";
-                SRoom.Text = "";
-                textBox6.Clear();
-                comboBox4.Items.Clear();
-            }
+                SRoom.Text = "";           
+            }      
             string input = textBox6.Text.ToString().ToLower();
             input = input.First().ToString().ToUpper() + input.Substring(1);
             List<Resident> residents = new List<Resident>();
             Files.READ(ref residents);
 
+            
             if (comboBox4.SelectedItem.ToString() is "First Name")
             {
                 Reset();
@@ -245,7 +262,7 @@ namespace Residence
                 {
                     if (residents[x].Fname == input)
                     {
-                        Search(ref residents, x);
+                        Search(ref residents, x);   
                     }
                 }
                 if (SFname.Text == "")
@@ -285,6 +302,8 @@ namespace Residence
                     label9.Show();
                 }
             }
+            textBox6.Clear();
+            comboBox4.SelectedItem = null;
         }
 
         //when search by comboBox(4) closed clears the search field (textBox6) 
@@ -299,6 +318,8 @@ namespace Residence
 
             }
         }
+
+        
     }
 
     //class for file operation methods
