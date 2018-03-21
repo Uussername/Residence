@@ -318,8 +318,6 @@ namespace Residence
 
             }
         }
-
-        
     }
 
     //class for file operation methods
