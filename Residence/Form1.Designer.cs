@@ -38,12 +38,18 @@
             this.loginEnter = new System.Windows.Forms.Button();
             this.Tabs = new System.Windows.Forms.TabControl();
             this.HomeTab = new System.Windows.Forms.TabPage();
-            this.logout = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.LogIn = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginError = new System.Windows.Forms.Label();
@@ -64,8 +70,8 @@
             this.Lname = new System.Windows.Forms.Label();
             this.StudentID = new System.Windows.Forms.Label();
             this.Fname = new System.Windows.Forms.Label();
-            this.newTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.newTitle = new System.Windows.Forms.Label();
             this.SearchTab = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.SRoom = new System.Windows.Forms.Label();
@@ -85,28 +91,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.form1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Tabs.SuspendLayout();
             this.HomeTab.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
             this.LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.NewTab.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SearchTab.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -197,23 +197,33 @@
             this.HomeTab.TabIndex = 0;
             this.HomeTab.Text = "Home";
             // 
-            // logout
+            // monthCalendar1
             // 
-            this.logout.Location = new System.Drawing.Point(650, 5);
-            this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(121, 40);
-            this.logout.TabIndex = 0;
-            this.logout.Text = "Logout";
-            this.logout.UseVisualStyleBackColor = true;
-            this.logout.Click += new System.EventHandler(this.logout_Click);
+            this.monthCalendar1.Font = new System.Drawing.Font("Tahoma", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthCalendar1.Location = new System.Drawing.Point(464, 315);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 21;
             // 
-            // panel4
+            // panel6
             // 
-            this.panel4.BackColor = System.Drawing.Color.Maroon;
-            this.panel4.Location = new System.Drawing.Point(-4, 80);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(150, 451);
-            this.panel4.TabIndex = 20;
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.button2);
+            this.panel6.Location = new System.Drawing.Point(464, 92);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(302, 211);
+            this.panel6.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(70, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(161, 24);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Resident Options";
             // 
             // button1
             // 
@@ -235,6 +245,24 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // logout
+            // 
+            this.logout.Location = new System.Drawing.Point(650, 5);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(121, 40);
+            this.logout.TabIndex = 0;
+            this.logout.Text = "Logout";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Maroon;
+            this.panel4.Location = new System.Drawing.Point(-4, 80);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(150, 451);
+            this.panel4.TabIndex = 20;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Maroon;
@@ -253,6 +281,37 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Location = new System.Drawing.Point(152, 92);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(300, 424);
+            this.panel5.TabIndex = 22;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label12.Location = new System.Drawing.Point(16, 79);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(260, 17);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "If there were events, they would be here";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(13, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 34);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Events";
             // 
             // LogIn
             // 
@@ -489,6 +548,15 @@
             this.Fname.TabIndex = 2;
             this.Fname.Text = "First Name";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.Controls.Add(this.newTitle);
+            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(786, 75);
+            this.panel1.TabIndex = 18;
+            // 
             // newTitle
             // 
             this.newTitle.AutoSize = true;
@@ -500,15 +568,6 @@
             this.newTitle.Size = new System.Drawing.Size(420, 51);
             this.newTitle.TabIndex = 0;
             this.newTitle.Text = "Create a New Resident";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
-            this.panel1.Controls.Add(this.newTitle);
-            this.panel1.Location = new System.Drawing.Point(-4, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(786, 75);
-            this.panel1.TabIndex = 18;
             // 
             // SearchTab
             // 
@@ -717,6 +776,15 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "First Name :";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(-4, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(786, 75);
+            this.panel2.TabIndex = 28;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -728,74 +796,6 @@
             this.label1.Size = new System.Drawing.Size(392, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search for a Resident";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Maroon;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(-4, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(786, 75);
-            this.panel2.TabIndex = 28;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Font = new System.Drawing.Font("Tahoma", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthCalendar1.Location = new System.Drawing.Point(464, 315);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 21;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Location = new System.Drawing.Point(152, 92);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 424);
-            this.panel5.TabIndex = 22;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.button1);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Location = new System.Drawing.Point(464, 92);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(302, 211);
-            this.panel6.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(70, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(161, 24);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Resident Options";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 12);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 34);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Events";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(16, 79);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(260, 17);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "If there were events, they would be here";
             // 
             // form1BindingSource
             // 
@@ -811,14 +811,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.Tabs);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Form1";
             this.Text = "Residence Hall";
             this.Tabs.ResumeLayout(false);
             this.HomeTab.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.LogIn.ResumeLayout(false);
             this.LogIn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -830,10 +835,6 @@
             this.SearchTab.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource1)).EndInit();
             this.ResumeLayout(false);
