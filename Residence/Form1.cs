@@ -363,6 +363,7 @@ namespace Residence
             using (StreamWriter sw = new StreamWriter(PATH, append: true))
             {
                 sw.WriteLine(entry);
+                sw.Close();
             }
         }
     }
