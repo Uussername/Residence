@@ -8,9 +8,7 @@ namespace Residence
 {
     public class Scholars : Resident
     {
-        double Rent = 100.00;
-
-        public Scholars(string ResidentType, string Fname, string Lname, string StudentID, string RoomNum, string RoomFloor)
+        public Scholars(string ResidentType, string Fname, string Lname, string StudentID, string RoomNum, string RoomFloor, string Hours)
         {
             this.ResidentType = ResidentType;
             this.Fname = Fname;
@@ -18,6 +16,8 @@ namespace Residence
             this.StudentID = StudentID;
             this.RoomNum = RoomNum;
             this.RoomFloor = RoomFloor;
+            this.Rent = 100.00;
+            this.Hours = Hours;
         }
     }
 }

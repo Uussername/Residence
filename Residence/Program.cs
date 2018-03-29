@@ -30,6 +30,7 @@ namespace Residence
         public string RoomNum { get; set; }
         public string RoomFloor { get; set; }
         public double Rent;
+        public string Hours;
         public Resident()
         {
         }

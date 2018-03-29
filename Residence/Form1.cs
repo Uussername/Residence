@@ -51,95 +51,89 @@ namespace Residence
         }
 
         //resident type box closed, changes floor combobox (comboBox1) to available floors
-        private void comboBox2_DropDownClosed(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
+            if (comboBox2.Text is "Athlete")
             {
-                if (comboBox2.SelectedItem.ToString() is "Athlete")
-                {
+                comboBox5.SelectedIndex = 0;
+                comboBox5.Hide();
+                label13.Hide();
                 comboBox1.Items.Clear();
                 comboBox3.Items.Clear();
                 object[] floors = new object[] { 4, 5, 6 };
                 comboBox1.Items.AddRange(floors);
-                }
-                if (comboBox2.SelectedItem.ToString() is "Student Worker")
-                {
+            }
+            if (comboBox2.Text is "Worker")
+            {
+                comboBox5.Show();
+                label13.Show();
                 comboBox1.Items.Clear();
                 comboBox3.Items.Clear();
                 object[] floors = new object[] { 1, 2, 3 };
                 comboBox1.Items.AddRange(floors);
-                }
-                if (comboBox2.SelectedItem.ToString() is "Scholarship")
-                {
+            }
+            if (comboBox2.Text is "Scholarship")
+            {
+                comboBox5.SelectedIndex = 0;
+                comboBox5.Hide();
+                label13.Hide();
                 comboBox1.Items.Clear();
                 comboBox3.Items.Clear();
                 object[] floors = new object[] { 7, 8 };
                 comboBox1.Items.AddRange(floors);
-                }
-            }
-            catch (NullReferenceException)
-            {
-
             }
         }
 
         //floor box closed, changes room number box (comboBox3) to available rooms on that floor
-        private void comboBox1_DropDownClosed(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
+            if (comboBox1.Text is "1")
             {
-                if (comboBox1.SelectedItem.ToString() is "1")
-                {
-                    comboBox3.Items.Clear();
-                    object[] rooms = new object[] { 101, 102, 103, 104, 105, 106, 107, 108, 109, 110 };
-                    comboBox3.Items.AddRange(rooms);
-                }
-                if (comboBox1.SelectedItem.ToString() is "2")
-                {
-                    comboBox3.Items.Clear();
-                    object[] rooms = new object[] { 201, 202, 203, 204, 205, 206, 207, 208, 209, 210 };
-                    comboBox3.Items.AddRange(rooms);
-                }
-                if (comboBox1.SelectedItem.ToString() is "3")
-                {
-                    comboBox3.Items.Clear();
-                    object[] rooms = new object[] { 301, 302, 303, 304, 305, 306, 307, 308, 309, 310 };
-                    comboBox3.Items.AddRange(rooms);
-                }
-                if (comboBox1.SelectedItem.ToString() is "4")
-                {
-                    comboBox3.Items.Clear();
-                    object[] rooms = new object[] { 401, 402, 403, 404, 405, 406, 407, 408, 409, 410 };
-                    comboBox3.Items.AddRange(rooms);
-                }
-                if (comboBox1.SelectedItem.ToString() is "5")
-                {
-                    comboBox3.Items.Clear();
-                    object[] rooms = new object[] { 501, 502, 503, 504, 505, 506, 507, 508, 509, 510 };
-                    comboBox3.Items.AddRange(rooms);
-                }
-                if (comboBox1.SelectedItem.ToString() is "6")
-                {
-                    comboBox3.Items.Clear();
-                    object[] rooms = new object[] { 601, 602, 603, 604, 605, 606, 607, 608, 609, 610 };
-                    comboBox3.Items.AddRange(rooms);
-                }
-                if (comboBox1.SelectedItem.ToString() is "7")
-                {
-                    comboBox3.Items.Clear();
-                    object[] rooms = new object[] { 701, 702, 703, 704, 705, 706, 707, 708, 709, 710 };
-                    comboBox3.Items.AddRange(rooms);
-                }
-                if (comboBox1.SelectedItem.ToString() is "8")
-                {
-                    comboBox3.Items.Clear();
-                    object[] rooms = new object[] { 801, 802, 803, 804, 805, 806, 807, 808, 809, 810 };
-                    comboBox3.Items.AddRange(rooms);
-                }
+                comboBox3.Items.Clear();
+                object[] rooms = new object[] { 101, 102, 103, 104, 105, 106, 107, 108, 109, 110 };
+                comboBox3.Items.AddRange(rooms);
             }
-            catch (NullReferenceException)
+            if (comboBox1.Text is "2")
             {
-
+                comboBox3.Items.Clear();
+                object[] rooms = new object[] { 201, 202, 203, 204, 205, 206, 207, 208, 209, 210 };
+                comboBox3.Items.AddRange(rooms);
+            }
+            if (comboBox1.Text is "3")
+            {
+                comboBox3.Items.Clear();
+                object[] rooms = new object[] { 301, 302, 303, 304, 305, 306, 307, 308, 309, 310 };
+                comboBox3.Items.AddRange(rooms);
+            }
+            if (comboBox1.Text is "4")
+            {
+                comboBox3.Items.Clear();
+                object[] rooms = new object[] { 401, 402, 403, 404, 405, 406, 407, 408, 409, 410 };
+                comboBox3.Items.AddRange(rooms);
+            }
+            if (comboBox1.Text is "5")
+            {
+                comboBox3.Items.Clear();
+                object[] rooms = new object[] { 501, 502, 503, 504, 505, 506, 507, 508, 509, 510 };
+                comboBox3.Items.AddRange(rooms);
+            }
+            if (comboBox1.Text is "6")
+            {
+                comboBox3.Items.Clear();
+                object[] rooms = new object[] { 601, 602, 603, 604, 605, 606, 607, 608, 609, 610 };
+                comboBox3.Items.AddRange(rooms);
+            }
+            if (comboBox1.Text is "7")
+            {
+                comboBox3.Items.Clear();
+                object[] rooms = new object[] { 701, 702, 703, 704, 705, 706, 707, 708, 709, 710 };
+                comboBox3.Items.AddRange(rooms);
+            }
+            if (comboBox1.Text is "8")
+            {
+                comboBox3.Items.Clear();
+                object[] rooms = new object[] { 801, 802, 803, 804, 805, 806, 807, 808, 809, 810 };
+                comboBox3.Items.AddRange(rooms);
             }
         }
         //user must check box in order to submit data
@@ -177,8 +171,14 @@ namespace Residence
                     return;
                 }
             }
-            string newEntry = $"{comboBox2.SelectedItem.ToString()},{textBox1.Text.ToString()},{textBox2.Text.ToString()}," +
-                $"{textBox3.Text.ToString()},{comboBox3.SelectedItem.ToString()},{comboBox1.SelectedItem.ToString()}";
+            string inp1 = textBox1.Text.ToString().ToLower();
+            inp1 = inp1.First().ToString().ToUpper() + inp1.Substring(1);
+
+            string inp2 = textBox2.Text.ToString().ToLower();
+            inp2 = inp2.First().ToString().ToUpper() + inp2.Substring(1);
+
+            string newEntry = $"{comboBox2.Text},{inp1},{inp2}," +
+                $"{textBox3.Text},{comboBox3.Text},{comboBox1.Text}, {comboBox5.Text}";
             Files.WRITE(newEntry);
             textBox1.Clear();
             textBox2.Clear();
@@ -186,6 +186,9 @@ namespace Residence
             comboBox2.SelectedItem = null;
             comboBox1.Items.Clear();
             comboBox3.Items.Clear();
+            comboBox5.SelectedIndex = 0;
+            comboBox5.Hide();
+            label13.Hide();
             success.Show();
         }
 
@@ -237,6 +240,7 @@ namespace Residence
                 SStudID.Text = residentz[x].StudentID;
                 SFloor.Text = residentz[x].RoomFloor;
                 SRoom.Text = residentz[x].RoomNum;
+                SRent.Text = $"${residentz[x].Rent.ToString()}";
             }
             //resets all the text labels, clears search box
             void Reset()
@@ -247,15 +251,15 @@ namespace Residence
                 SResType.Text = "";
                 SStudID.Text = "";
                 SFloor.Text = "";
-                SRoom.Text = "";           
+                SRoom.Text = "";
+                SRent.Text = "";
             }      
             string input = textBox6.Text.ToString().ToLower();
             input = input.First().ToString().ToUpper() + input.Substring(1);
             List<Resident> residents = new List<Resident>();
             Files.READ(ref residents);
-
-            
-            if (comboBox4.SelectedItem.ToString() is "First Name")
+         
+            if (comboBox4.Text is "First Name")
             {
                 Reset();
                 for (var x = 0; x < residents.Count(); x++)
@@ -271,7 +275,7 @@ namespace Residence
                 }
             }
 
-            if (comboBox4.SelectedItem.ToString() is "Last Name")
+            if (comboBox4.Text is "Last Name")
             {
                 Reset();
                 for (var x = 0; x < residents.Count(); x++)
@@ -287,7 +291,7 @@ namespace Residence
                 }
             }
 
-            if (comboBox4.SelectedItem.ToString() is "Student ID")
+            if (comboBox4.Text is "Student ID")
             {
                 Reset();
                 for (var x = 0; x < residents.Count(); x++)
@@ -307,22 +311,16 @@ namespace Residence
         }
 
         //when search by comboBox(4) closed clears the search field (textBox6) 
-        private void comboBox4_DropDownClosed(object sender, EventArgs e)
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                textBox6.Clear();
-            }
-            catch (NullReferenceException)
-            {
-
-            }
+            textBox6.Clear();
         }
     }
 
     //class for file operation methods
     public class Files
     {
+        //Reads file
         const string PATH = @"C:\Users\thoantj\OneDrive - dunwoody.edu\Advanced Programing\Projects\Residence\Residence_hall_info.csv";
         public static void READ(ref List<Resident> residents)
         {
@@ -340,17 +338,17 @@ namespace Residence
                 values = read.ReadLine().Split(',');
                 if (values[0] == "Athlete")
                 {
-                    athleteRes = new Athletes(values[0], values[1], values[2], values[3], values[4], values[5]);
+                    athleteRes = new Athletes(values[0], values[1], values[2], values[3], values[4], values[5], values[6]);
                     residents.Add(athleteRes);
                 }
                 if (values[0] == "Worker")
                 {
-                    workerRes = new Workers(values[0], values[1], values[2], values[3], values[4], values[5]);
+                    workerRes = new Workers(values[0], values[1], values[2], values[3], values[4], values[5], values[6]);
                     residents.Add(workerRes);
                 }
                 if (values[0] == "Scholarship")
                 {
-                    scholarRes = new Scholars(values[0], values[1], values[2], values[3], values[4], values[5]);
+                    scholarRes = new Scholars(values[0], values[1], values[2], values[3], values[4], values[5], values[6]);
                     residents.Add(scholarRes);
                 }
             }
@@ -358,6 +356,8 @@ namespace Residence
             file.Close(); //close file stream
             return;
         }
+
+        //writes to file
         public static void WRITE(string entry)
         {
             using (StreamWriter sw = new StreamWriter(PATH, append: true))

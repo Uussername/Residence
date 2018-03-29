@@ -54,6 +54,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginError = new System.Windows.Forms.Label();
             this.NewTab = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.Verify = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.success = new System.Windows.Forms.Label();
@@ -73,6 +75,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.newTitle = new System.Windows.Forms.Label();
             this.SearchTab = new System.Windows.Forms.TabPage();
+            this.SRent = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.SRoom = new System.Windows.Forms.Label();
             this.SFloor = new System.Windows.Forms.Label();
@@ -362,6 +366,8 @@
             // NewTab
             // 
             this.NewTab.BackColor = System.Drawing.Color.DarkGray;
+            this.NewTab.Controls.Add(this.label13);
+            this.NewTab.Controls.Add(this.comboBox5);
             this.NewTab.Controls.Add(this.Verify);
             this.NewTab.Controls.Add(this.button3);
             this.NewTab.Controls.Add(this.success);
@@ -385,6 +391,46 @@
             this.NewTab.Size = new System.Drawing.Size(778, 527);
             this.NewTab.TabIndex = 1;
             this.NewTab.Text = "New Resident";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(456, 278);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(136, 24);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Hours Worked";
+            this.label13.Visible = false;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"});
+            this.comboBox5.Location = new System.Drawing.Point(611, 272);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(106, 32);
+            this.comboBox5.TabIndex = 19;
+            this.comboBox5.Visible = false;
             // 
             // Verify
             // 
@@ -449,14 +495,14 @@
             this.comboBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Student Worker",
+            "Worker",
             "Athlete",
             "Scholarship"});
             this.comboBox2.Location = new System.Drawing.Point(170, 275);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(208, 32);
             this.comboBox2.TabIndex = 12;
-            this.comboBox2.DropDownClosed += new System.EventHandler(this.comboBox2_DropDownClosed);
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -467,7 +513,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 32);
             this.comboBox1.TabIndex = 11;
-            this.comboBox1.DropDownClosed += new System.EventHandler(this.comboBox1_DropDownClosed);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox3
             // 
@@ -577,6 +623,8 @@
             // SearchTab
             // 
             this.SearchTab.BackColor = System.Drawing.Color.DarkGray;
+            this.SearchTab.Controls.Add(this.SRent);
+            this.SearchTab.Controls.Add(this.label14);
             this.SearchTab.Controls.Add(this.label9);
             this.SearchTab.Controls.Add(this.SRoom);
             this.SearchTab.Controls.Add(this.SFloor);
@@ -603,6 +651,25 @@
             this.SearchTab.TabIndex = 2;
             this.SearchTab.Text = "Search Resident";
             // 
+            // SRent
+            // 
+            this.SRent.AutoSize = true;
+            this.SRent.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SRent.Location = new System.Drawing.Point(184, 463);
+            this.SRent.Name = "SRent";
+            this.SRent.Size = new System.Drawing.Size(0, 24);
+            this.SRent.TabIndex = 30;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(8, 463);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 24);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Rent :";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -618,7 +685,7 @@
             // 
             this.SRoom.AutoSize = true;
             this.SRoom.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SRoom.Location = new System.Drawing.Point(185, 460);
+            this.SRoom.Location = new System.Drawing.Point(184, 413);
             this.SRoom.Name = "SRoom";
             this.SRoom.Size = new System.Drawing.Size(0, 24);
             this.SRoom.TabIndex = 26;
@@ -627,7 +694,7 @@
             // 
             this.SFloor.AutoSize = true;
             this.SFloor.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SFloor.Location = new System.Drawing.Point(185, 410);
+            this.SFloor.Location = new System.Drawing.Point(184, 363);
             this.SFloor.Name = "SFloor";
             this.SFloor.Size = new System.Drawing.Size(0, 24);
             this.SFloor.TabIndex = 25;
@@ -636,7 +703,7 @@
             // 
             this.SResType.AutoSize = true;
             this.SResType.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SResType.Location = new System.Drawing.Point(185, 360);
+            this.SResType.Location = new System.Drawing.Point(184, 313);
             this.SResType.Name = "SResType";
             this.SResType.Size = new System.Drawing.Size(0, 24);
             this.SResType.TabIndex = 24;
@@ -645,7 +712,7 @@
             // 
             this.SStudID.AutoSize = true;
             this.SStudID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SStudID.Location = new System.Drawing.Point(185, 310);
+            this.SStudID.Location = new System.Drawing.Point(184, 263);
             this.SStudID.Name = "SStudID";
             this.SStudID.Size = new System.Drawing.Size(0, 24);
             this.SStudID.TabIndex = 23;
@@ -654,7 +721,7 @@
             // 
             this.SLname.AutoSize = true;
             this.SLname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SLname.Location = new System.Drawing.Point(185, 260);
+            this.SLname.Location = new System.Drawing.Point(184, 213);
             this.SLname.Name = "SLname";
             this.SLname.Size = new System.Drawing.Size(0, 24);
             this.SLname.TabIndex = 22;
@@ -663,7 +730,7 @@
             // 
             this.SFname.AutoSize = true;
             this.SFname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SFname.Location = new System.Drawing.Point(185, 210);
+            this.SFname.Location = new System.Drawing.Point(184, 163);
             this.SFname.Name = "SFname";
             this.SFname.Size = new System.Drawing.Size(0, 24);
             this.SFname.TabIndex = 21;
@@ -692,7 +759,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(148, 32);
             this.comboBox4.TabIndex = 19;
-            this.comboBox4.DropDownClosed += new System.EventHandler(this.comboBox4_DropDownClosed);
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -727,7 +794,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 460);
+            this.label2.Location = new System.Drawing.Point(8, 413);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 24);
             this.label2.TabIndex = 13;
@@ -737,7 +804,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 410);
+            this.label3.Location = new System.Drawing.Point(8, 363);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 24);
             this.label3.TabIndex = 12;
@@ -747,7 +814,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 360);
+            this.label4.Location = new System.Drawing.Point(8, 313);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 24);
             this.label4.TabIndex = 11;
@@ -757,7 +824,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 260);
+            this.label5.Location = new System.Drawing.Point(8, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 24);
             this.label5.TabIndex = 10;
@@ -767,7 +834,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 310);
+            this.label6.Location = new System.Drawing.Point(8, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 24);
             this.label6.TabIndex = 9;
@@ -777,7 +844,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 210);
+            this.label7.Location = new System.Drawing.Point(8, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 24);
             this.label7.TabIndex = 8;
@@ -915,6 +982,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label SRent;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }
 
